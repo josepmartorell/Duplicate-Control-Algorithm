@@ -3,6 +3,7 @@
 
 import os
 import hashlib
+import file_generator
 
 class main:
 
@@ -41,6 +42,7 @@ class main:
             print('File: ', self.mydict[key])
 
 
+print(file_generator.f)
 ext = '.txt'
 obj = main(ext)
 obj.detect()
