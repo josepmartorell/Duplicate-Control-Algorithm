@@ -1,20 +1,23 @@
 from os import strerror
 
 head = 'file'
-ext = '.txt'
+form = ['ID:', 'Company:', 'Geolocation:', 'Category:', 'Staff:', 'Business:',
+        'Seniority:', 'References:', 'Channels:', 'Appointment:', 'Interview:','Tracer:', 'Closing:', 'IBAN:']
+ext = str(input("enter the extension file to be created (txt, odt): "))
 f = int(input("enter the quantity of files to be created: "))
+test = 'file3' + '.' + ext
 
 try:
     def generator(quantity):
-        mylist = []
+        my_list = []
         i = 1
         while i <= quantity:
-            mylist.append(head + str(i) + ext)
+            my_list.append(head + str(i) + '.' + ext)
             i += 1
-        return mylist
+        return my_list
 
 
-    # print the secuence
+    # print the sequence
     for j in generator(f):
         print(j)
 
@@ -27,7 +30,18 @@ try:
     # generate the files
     for i in range(f):
         fo = open(mylist2[i], 'wt')
-    fo.close()
+        fo.close()
 
 except IOError as e:
     print("I/O error occurred: ", strerror(e.errno))
+
+try:
+    foo = open(test ,'wt')
+
+    for i in range(14):
+        foo.write(form[i] + "\n\n")
+    foo.close()
+
+except IOError as e:
+
+    print("I/O error oc curred: ", strerror(e.errno))
