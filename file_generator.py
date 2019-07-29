@@ -1,11 +1,26 @@
 from os import strerror
 
 head = 'file'
-form = ['ID:', 'Company:', 'Geolocation:', 'Category:', 'Staff:', 'Business:',
-        'Seniority:', 'References:', 'Channels:', 'Appointment:', 'Interview:','Tracer:', 'Closing:', 'IBAN:']
-ext = str(input("enter the extension file to be created (txt, odt): "))
-f = int(input("enter the quantity of files to be created: "))
+ext = str(input(
+    'enter the extension file to be created (txt, odt): '))
+f = int(input(
+    'enter the quantity of files to be created: '))
 test = 'file3' + '.' + ext
+form = ['ID:',
+        'Company:',
+        'Geolocation:',
+        'Category:',
+        'Staff:',
+        'Business:',
+        'Seniority:',
+        'References:',
+        'Channels:',
+        'Appointment:',
+        'Interview:',
+        'Tracer:',
+        'Closing:',
+        'IBAN:']
+
 
 try:
     def generator(quantity):
@@ -15,7 +30,6 @@ try:
             my_list.append(head + str(i) + '.' + ext)
             i += 1
         return my_list
-
 
     # print the sequence
     for j in generator(f):
@@ -34,6 +48,7 @@ try:
 
 except IOError as e:
     print("I/O error occurred: ", strerror(e.errno))
+    
 
 try:
     foo = open(test ,'wt')
