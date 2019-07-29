@@ -1,48 +1,46 @@
 #!/usr/bin/python3.7
-#! -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 
 import os
 import hashlib
 import file_generator
 
-class main:
+class Main:
 
     def __init__(self, extension):
 
         self.extension = extension
         self.count = 0
-        self.mydict = {}
-        self.thefile = ()
-
+        self.my_dict = {}
+        self.the_file = ()
 
     def detect(self):
 
-        # walk throught de directories serching for extension's files
+        # walk through de directories searching for extension's files
 
         for (dirname, dirs, files) in os.walk('.'):
             for filename in files:
-                thefile = os.path.join(dirname, filename)
-                hasher = hashlib.md5()
-                with open(thefile, 'rb') as afile:
+                the_file = os.path.join(dirname, filename)
+                h = hashlib.md5()
+                with open(the_file, 'rb') as afile:
                     buf = afile.read()
-                    hasher.update(buf)
-                thehash = hasher.hexdigest()
+                    h.update(buf)
+                thehash = h.hexdigest()
 
                 # in case of txt extension fill the tuple of de dict or else a simple value
 
                 if filename.endswith(self.extension):
-                    if thehash in self.mydict:
-                        self.mydict[thehash] += (thefile,)
+                    if thehash in self.my_dict:
+                        self.my_dict[thehash] += (the_file,)
                     else:
-                        self.mydict[thehash] = (thefile,)
+                        self.my_dict[thehash] = (the_file,)
 
         # print hashes and values
-        for key in self.mydict.keys():
+        for key in self.my_dict.keys():
             print('Hash: ', key)
-            print('File: ', self.mydict[key])
+            print('File: ', self.my_dict[key])
 
 
 print(file_generator.f)
-ext = '.txt'
-obj = main(ext)
+obj = Main(file_generator.ext)
 obj.detect()
