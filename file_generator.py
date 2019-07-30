@@ -8,7 +8,7 @@ f = int(input(
 test = 'file3' + '.' + ext
 form = ['ID:',
         'Company:',
-        'Geolocation:',
+        'Address:',
         'Category:',
         'Staff:',
         'Business:',
@@ -19,7 +19,7 @@ form = ['ID:',
         'Interview:',
         'Tracer:',
         'Closing:',
-        'IBAN:']
+        'Account:']
 
 
 try:
