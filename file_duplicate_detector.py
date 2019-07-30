@@ -5,6 +5,7 @@ import os
 import hashlib
 import file_generator
 
+
 class Main:
 
     def __init__(self, extension):
