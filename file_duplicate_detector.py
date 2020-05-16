@@ -19,7 +19,8 @@ class Main:
 
         # walk through de directories searching for extension's files
 
-        for (dirname, dirs, files) in os.walk('.'):
+        for (dirname, dirs, files) in os.walk('../../Downloads/'):
+            print(dirname)
             for filename in files:
                 the_file = os.path.join(dirname, filename)
                 h = hashlib.md5()
