@@ -3,7 +3,7 @@
 
 import os
 import hashlib
-import file_generator
+import file_report_generator
 
 
 class Main:
@@ -39,9 +39,10 @@ class Main:
         # print hashes and values
         for key in self.my_dict.keys():
             print('Hash: ', key)
-            print('File: ', self.my_dict[key])
+            snap = ' '.join(self.my_dict[key]).strip('./')
+            print('File: ', snap)
 
 
-print(file_generator.f)
-obj = Main(file_generator.ext)
-obj.detect()
+if __name__ == '__main__':
+    obj = Main(file_report_generator.ext)
+    obj.detect()
