@@ -2,9 +2,9 @@ from os import strerror
 
 head = 'file'
 ext = str(input(
-    'enter the extension file to be created (txt, odt): '))
+    '\nenter the report file extension to be created (txt, odt): '))
 f = int(input(
-    'enter the quantity of files to be created: '))
+    'enter the quantity of test files to be created:\n '))
 test = 'file3' + '.' + ext
 form = ['ID:',
         'Company:',
@@ -21,7 +21,6 @@ form = ['ID:',
         'Closing:',
         'Account:']
 
-
 try:
     def generator(quantity):
         my_list = []
@@ -30,13 +29,6 @@ try:
             my_list.append(head + str(i) + '.' + ext)
             i += 1
         return my_list
-
-    # print the sequence
-    for j in generator(f):
-        print(j)
-
-    # print the list itself
-    print(generator(f))
 
     # create a list to be accessed
     mylist2 = list(generator(f))
@@ -48,7 +40,6 @@ try:
 
 except IOError as e:
     print("I/O error occurred: ", strerror(e.errno))
-    
 
 try:
     foo = open(test ,'wt')
