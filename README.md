@@ -1,8 +1,6 @@
-# Duplicate-Control-Algorithm
+# FileManager :woozy_face: 
 
-The duplicate control algorithm detects identical files within the same 
-selected extension and directory to quantify duplicate files and eliminate 
-them if necessary.
+This script uses various resources to manage tasks in the Linux operating system of the Ubuntu distribution.
 
 # Table of Contents
 
@@ -14,21 +12,19 @@ them if necessary.
 # How to Install
 
 First you must access from your terminal to the directory where you want to save the project. Install this project on your local computer by typing the following in the command prompt of the linux command interpreter:
-git clone https://github.com/josepmartorell/Duplicate-Control-Algorithm.git
+git clone https://github.com/josepmartorell/FileManager.git
 
-# Usage
+# Usage :bowtie:
 
 To run the script you should first access the src folder and type this line in the interpreter's order indicator to run the script:
-username@hostname:~/PycharmProjects/project_foulder$ python3 file_duplicate_detector.py
+username@hostname:~/PycharmProjects/project_foulder$ python3 FileManager.py
 
 # Features
 
-- The script ask for the type or extension (recommended txt or odt for this example)
-- Ask for the quantity of files (recommended set 4 files)
-- Automatically generates the files
-- Automatically create a form in the third file to test the duplicator function
-- Displays both an iteration and a list of the created files
-- Show hashes with attachments (notice that the third file has a different hash)
+- The script ask for the swith manager run mode, targeting all files or specific extension
+- Hashes all files (or just the extension requested) with MD5 algorithm in downloads dir
+- Show hashes with attachments or notify there are not files with the extension required
+- In case of duplicate files ask if you want to delete them ... (to be continued)
 
 # License
 
