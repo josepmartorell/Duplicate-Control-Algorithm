@@ -1,7 +1,8 @@
 import time
 import sys
 from past.builtins import xrange
-
+import os
+import glob
 
 ext = str(input('\nSwitch manager run mode:'
                 '\n\tTARGET EXTENSION FILE ......... type specific extension (zip, xlsx, odt, txt..) + enter'
@@ -32,3 +33,13 @@ def progress():
         sys.stdout.flush()
 
     sys.stdout.write("\n")
+
+
+def remove():
+    rem = str(input('\nSwitch manager run execution:'
+                    '\n\tREMOVE ALL FILES .............. type (rem) + enter'
+                    "\n\tSKIP........................... just press enter\n"))
+    if rem == 'rem':
+        files = glob.glob('../../Downloads/*')
+        for f in files:
+            os.remove(f)
