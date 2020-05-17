@@ -18,6 +18,8 @@ class Main:
             # walk through de directories searching for extension's files
             for (dirname, dirs, files) in os.walk('../../Downloads/'):
                 print('hashing files in', ''.join(dirname).strip('./'), 'dir ...\n')
+                utils.progress()
+                print("\t")
                 for filename in files:
                     the_file = os.path.join(dirname, filename)
                     h = hashlib.md5()
