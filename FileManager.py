@@ -54,3 +54,4 @@ class Main:
 if __name__ == '__main__':
     obj = Main(utils.ext)
     obj.detect()
+    utils.remove()
