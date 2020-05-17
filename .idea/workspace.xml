@@ -21,12 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1281c1a0-e059-4e36-bd84-f7862387484a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file1." beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/file1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/file3." beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/file3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/file_duplicate_detector.py" beforeDir="false" afterPath="$PROJECT_DIR$/FileManager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file_report_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FileManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/FileManager.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,29 +136,33 @@
       <screen x="72" y="27" width="1848" height="923" />
     </state>
     <state x="779" y="246" width="424" height="491" key="FileChooserDialogImpl/72.27.1848.923@72.27.1848.923" timestamp="1589642054148" />
-    <state width="1825" height="236" key="GridCell.Tab.0.bottom" timestamp="1589668697278">
+    <state width="1825" height="236" key="GridCell.Tab.0.bottom" timestamp="1589709825272">
       <screen x="72" y="27" width="1848" height="923" />
     </state>
-    <state width="1825" height="236" key="GridCell.Tab.0.bottom/72.27.1848.923@72.27.1848.923" timestamp="1589668697278" />
-    <state width="1825" height="236" key="GridCell.Tab.0.center" timestamp="1589668697275">
+    <state width="1825" height="236" key="GridCell.Tab.0.bottom/72.27.1848.923@72.27.1848.923" timestamp="1589709825272" />
+    <state width="1825" height="236" key="GridCell.Tab.0.center" timestamp="1589709825271">
       <screen x="72" y="27" width="1848" height="923" />
     </state>
-    <state width="1825" height="236" key="GridCell.Tab.0.center/72.27.1848.923@72.27.1848.923" timestamp="1589668697275" />
-    <state width="1825" height="236" key="GridCell.Tab.0.left" timestamp="1589668697275">
+    <state width="1825" height="236" key="GridCell.Tab.0.center/72.27.1848.923@72.27.1848.923" timestamp="1589709825271" />
+    <state width="1825" height="236" key="GridCell.Tab.0.left" timestamp="1589709825270">
       <screen x="72" y="27" width="1848" height="923" />
     </state>
-    <state width="1825" height="236" key="GridCell.Tab.0.left/72.27.1848.923@72.27.1848.923" timestamp="1589668697275" />
-    <state width="1825" height="236" key="GridCell.Tab.0.right" timestamp="1589668697277">
+    <state width="1825" height="236" key="GridCell.Tab.0.left/72.27.1848.923@72.27.1848.923" timestamp="1589709825270" />
+    <state width="1825" height="236" key="GridCell.Tab.0.right" timestamp="1589709825271">
       <screen x="72" y="27" width="1848" height="923" />
     </state>
-    <state width="1825" height="236" key="GridCell.Tab.0.right/72.27.1848.923@72.27.1848.923" timestamp="1589668697277" />
-    <state x="687" y="172" width="608" height="640" key="RollbackChangesDialog" timestamp="1589662552659">
+    <state width="1825" height="236" key="GridCell.Tab.0.right/72.27.1848.923@72.27.1848.923" timestamp="1589709825271" />
+    <state x="687" y="172" width="608" height="640" key="RollbackChangesDialog" timestamp="1589709882075">
       <screen x="72" y="27" width="1848" height="923" />
     </state>
-    <state x="687" y="172" width="608" height="640" key="RollbackChangesDialog/72.27.1848.923@72.27.1848.923" timestamp="1589662552659" />
+    <state x="687" y="172" width="608" height="640" key="RollbackChangesDialog/72.27.1848.923@72.27.1848.923" timestamp="1589709882075" />
     <state x="485" y="123" width="1022" height="737" key="SettingsEditor" timestamp="1589641918179">
       <screen x="72" y="27" width="1848" height="923" />
     </state>
     <state x="485" y="123" width="1022" height="737" key="SettingsEditor/72.27.1848.923@72.27.1848.923" timestamp="1589641918179" />
+    <state x="659" y="226" width="672" height="678" key="search.everywhere.popup" timestamp="1589705384893">
+      <screen x="72" y="27" width="1848" height="923" />
+    </state>
+    <state x="659" y="226" width="672" height="678" key="search.everywhere.popup/72.27.1848.923@72.27.1848.923" timestamp="1589705384893" />
   </component>
 </project>
