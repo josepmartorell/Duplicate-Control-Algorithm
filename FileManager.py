@@ -12,6 +12,10 @@ class Main:
         self.count = 0
         self.my_dict = {}
         self.the_file = ()
+        self.hash = ''
+        if self.extension == 'zip' or self.extension == 'gz':
+            self.extension = 'gz'
+            self.hash = ' sha256'
 
     def detect(self):
         try:
@@ -22,7 +26,10 @@ class Main:
                 print("\t")
                 for filename in files:
                     the_file = os.path.join(dirname, filename)
-                    h = hashlib.md5()
+                    if self.extension != 'gz':
+                        h = hashlib.md5()
+                    else:
+                        h = hashlib.sha256()
                     with open(the_file, 'rb') as afile:
                         buf = afile.read()
                         h.update(buf)
@@ -41,9 +48,9 @@ class Main:
             if check is not True:
                 # print hashes and values
                 for key in self.my_dict.keys():
-                    snap = ' '.join(self.my_dict[key]).strip('./Downloads')
+                    snap = ' '.join(self.my_dict[key]).lstrip('./Downloads')
                     print('File: ', snap)
-                    print('Hash: ', key)
+                    print('Hash: ', key, self.hash)
             else:
                 print('there are no files with the ' + utils.ext + ' extension')
 
