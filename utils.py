@@ -5,8 +5,8 @@ from past.builtins import xrange
 import os
 import glob
 
-ext = str(input('\nSwitch manager run mode:'
-                '\n\tTARGET EXTENSION FILE ......... type specific extension (zip, xlsx, odt, txt..) + enter'
+ext = str(input('\nSwitch manager run execution:'
+                '\n\tTARGET EXTENSION FILE ......... type specific extension (zip, tar.gz ...) + enter'
                 "\n\tTARGET ALL FILES .............. just press enter\n"))
 
 
@@ -36,13 +36,15 @@ def progress():
     sys.stdout.write("\n")
 
 
-def unzip(path):
+def unzip():
     zip = str(input('\nSwitch manager run execution:'
                     '\n\tUNPACK ZIP FILES .............. type (zip) + enter'
                     "\n\tSKIP........................... just press enter\n"))
-    if zip == 'zip':
+    path = '/home/jmartorell/Downloads/'
+    if zip != '':
         print('unpacking zip files ...\n')
         progress()
+        counter = 0
         files = os.listdir(path)
         for file in files:
             if file.endswith('.zip'):
@@ -51,16 +53,19 @@ def unzip(path):
                 for names in zip_file.namelist():
                     zip_file.extract(names, path)
                 zip_file.close()
-        print('\ndone!')
-    else:
-        print('\nzip packages not found ...')
+                counter += 1
+        if counter != 0:
+            print('\ndone!')
+        else:
+            print('\nzip packages not found ...')
 
 
 def remove():
     rem = str(input('\nSwitch manager run execution:'
                     '\n\tREMOVE ALL FILES .............. type (rem) + enter'
                     "\n\tSKIP........................... just press enter\n"))
-    if rem == 'rem':
+    if rem != '':
         files = glob.glob('../../Downloads/*')
         for f in files:
             os.remove(f)
+        print('\nempty folder!')

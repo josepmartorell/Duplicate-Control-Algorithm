@@ -13,8 +13,10 @@ class Main:
         self.my_dict = {}
         self.the_file = ()
         self.hash = ''
-        if self.extension == 'zip' or self.extension == 'gz':
+        if self.extension != "":
             self.hash = ' sha256'
+        else:
+            self.hash = ' md5'
 
     def detect(self):
         try:
@@ -25,16 +27,16 @@ class Main:
                 print("\t")
                 for filename in files:
                     the_file = os.path.join(dirname, filename)
-                    if self.extension == 'zip':
-                        h = hashlib.sha256()
-                    else:
+                    if self.extension == '':
                         h = hashlib.md5()
+                    else:
+                        h = hashlib.sha256()
                     with open(the_file, 'rb') as afile:
                         buf = afile.read()
                         h.update(buf)
                     thehash = h.hexdigest()
 
-                    # in case of txt extension fill the tuple of de dict or else a simple value
+                    # in case of duplication fill the tuple of de dict or else a simple value
 
                     if filename.endswith(self.extension):
                         if thehash in self.my_dict:
@@ -50,10 +52,6 @@ class Main:
                     snap = ' '.join(self.my_dict[key]).lstrip('./Downloads')
                     print('File: ', snap)
                     print('Hash: ', key, self.hash)
-                    try:
-                        utils.unzip('/home/jmartorell/Downloads/')
-                    except FileNotFoundError as e:
-                        print('Error: ', e)
             else:
                 print('there are no files with the ' + utils.ext + ' extension')
 
@@ -64,4 +62,5 @@ class Main:
 if __name__ == '__main__':
     obj = Main(utils.ext)
     obj.detect()
+    utils.unzip()
     utils.remove()
