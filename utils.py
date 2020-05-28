@@ -1,9 +1,10 @@
+import shutil
 import time
 import sys
 import zipfile
 from past.builtins import xrange
 import os
-import glob
+
 
 ext = str(input('\nSwitch manager run execution:'
                 '\n\tTARGET EXTENSION FILE ......... type specific extension (zip, tar.gz ...) + enter'
@@ -65,7 +66,11 @@ def remove():
                     '\n\tREMOVE ALL FILES .............. type (rem) + enter'
                     "\n\tSKIP........................... just press enter\n"))
     if rem != '':
-        files = glob.glob('../../Downloads/*')
-        for f in files:
-            os.remove(f)
+        for root, dirs, files in os.walk('../../Downloads/'):
+            for f in files:
+                os.unlink(os.path.join(root, f))
+            for d in dirs:
+                shutil.rmtree(os.path.join(root, d))
         print('\nempty folder!')
+
+
