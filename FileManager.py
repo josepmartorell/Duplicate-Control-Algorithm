@@ -35,9 +35,8 @@ class Main:
                         buf = afile.read()
                         h.update(buf)
                     thehash = h.hexdigest()
-
-                    # in case of duplication fill the tuple of de dict or else a simple value
-
+                    # in case of duplication files it fills the tuple of
+                    # the dictionary or if not is the case simply a value
                     if filename.endswith(self.extension):
                         if thehash in self.my_dict:
                             self.my_dict[thehash] += (the_file,)
